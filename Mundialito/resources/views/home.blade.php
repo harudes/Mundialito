@@ -17,6 +17,9 @@
                     You are logged in, {{$nickname}}!
                 </div>
             </div>
+            <div>
+                <a class="btn btn-outline mw-md rounded btn-primary">Mis figuritas</a>
+            </div>
         </div>
     </div>
 </div>
