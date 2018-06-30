@@ -11,8 +11,8 @@ class MyFigurinesController extends Controller
     public function index(){
         $figuritas = DB::table('users')
         			->join('figuritas_x_usuario', 'users.id', '=', 'figuritas_x_usuario.user_id')
-        			->join('figuritas','figuritas_x_usuario.figurita_id','=','figuritas.id')
-        			->value('figuritas.id');
+        			->join('figuritas','figuritas_x_usuario.figurita_id','=','figuritas.id')->get()
+        			/*->value('figuritas.id')*/;
         $data = ['figuritas'=>$figuritas];
         return view('myfigurines',$data);
     }

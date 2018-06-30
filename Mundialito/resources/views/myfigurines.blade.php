@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    Aquí se mostrará tus figuritas.{{$figuritas}}
+                    Aquí se mostrará tus figuritas.
+                    @foreach($figuritas as $figurita)
+                    	{{$figurita->imagen}}
+					@endforeach
                 </div>
             </div>
         </div>
