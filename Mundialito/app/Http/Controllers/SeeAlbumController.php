@@ -15,7 +15,8 @@ class SeeAlbumController extends Controller
         			->join('figuritas','figuritas_x_usuario.figurita_id','=','figuritas.id')
         			->join('paises','figuritas.pais_id','=','paises.id')
         			->where('paises.id','=',$page)->get();
-        $data = ['figuritas'=>$figuritas,'pais'=>$figuritas[0]->nombre];
+        $pais=DB::table('paises')->where('paises.id','=',$page)->value('nombre');
+        $data = ['figuritas'=>$figuritas,'pais'=>$pais];
         /*foreach($figuritas as $figurita){
         	print_r($figurita);
         }*/

@@ -18,6 +18,9 @@
               </div>
             </div>
          @endforeach
+         @for($i=1;$i< 33;$i++)
+            <a href="{{route('myalbum',['page' => $i])}}" class="btn btn-outline mw-md rounded btn-primary">{{$i}}</a>
+         @endfor
     </div>
 </div>
 @endsection
