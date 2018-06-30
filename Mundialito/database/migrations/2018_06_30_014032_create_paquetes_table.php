@@ -19,6 +19,7 @@ class CreatePaquetesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedInteger('rareza');
             $table->foreign('rareza')->references('id')->on('tipo_paquete')->onDelete('cascade');
+            $table->integer('cantidad')->default(0);
         });
     }
 

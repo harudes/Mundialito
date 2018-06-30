@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PaisesTableSeeder::class);
         $this->call(FiguritasTableSeeder::class);
         $this->call(TipoPaqueteSeeder::class);
+        $this->call(PaquetesTableSeeder::class);
     }
 }
