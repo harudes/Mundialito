@@ -49,5 +49,16 @@ class FiguritasTableSeeder extends Seeder
             'edad'=>32,
             'valoracion'=>87,
         ]);
+        DB::table('figuritas')->insert([
+            'pais_id' => 2,
+            'nombre'=> 'Musiera',
+            'imagen'=> '1-Uruguay',
+            'rareza'=>1,
+            'tipo'=>'Jugador',
+            'altura'=>1.90,
+            'posicion'=>1,
+            'edad'=>32,
+            'valoracion'=>87,
+        ]);
     }
 }

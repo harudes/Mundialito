@@ -29,7 +29,7 @@ class TipoPaqueteSeeder extends Seeder
         DB::table('tipo_paquete')->insert([
             'precio' => 1000,
             'imagen' => 'paquete-4',
-            'nombre' => 'Paquetes especial',
+            'nombre' => 'Paquetes especiales',
         ]);
     }
 }
