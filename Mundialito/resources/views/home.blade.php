@@ -24,7 +24,7 @@
                 <a href="{{route('myalbum',['page' => 1])}}" class="btn btn-outline mw-md rounded btn-primary">Álbum</a>
             </div>    
             <div>
-                <a href="{{route('openpackage')}}" class="btn btn-outline mw-md rounded btn-primary">Paquetes</a>
+                <a href="{{route('mypackages')}}" class="btn btn-outline mw-md rounded btn-primary">Paquetes</a>
             </div>        
         </div>
     </div>

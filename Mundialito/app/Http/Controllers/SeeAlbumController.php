@@ -14,7 +14,11 @@ class SeeAlbumController extends Controller
         			->join('figuritas_x_usuario', 'users.id', '=', 'figuritas_x_usuario.user_id')
         			->join('figuritas','figuritas_x_usuario.figurita_id','=','figuritas.id')
         			->join('paises','figuritas.pais_id','=','paises.id')
-        			->where('paises.id','=',$page)->get();
+        			->where('paises.id','=',$page)
+		            ->where(function ($query) {
+		                $query->where('users.id','=',Auth::id());
+		            })->get();
+        			//->where('paises.id','=',$page)->orWhere('users.id','=',Auth::id())->get();
         $pais=DB::table('paises')->where('paises.id','=',$page)->value('nombre');
         $data = ['figuritas'=>$figuritas,'pais'=>$pais];
         /*foreach($figuritas as $figurita){

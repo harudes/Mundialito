@@ -11,9 +11,7 @@
                   <div class="caption">
                     <h3>{{$paquete->nombre}}</h3>
                     <h3>En posesión:{{$paquete->cantidad}}</h3>
-                    <p>...</p>
-                    <p>
-                    </p>
+                    <a href="{{route('openpackage',['rarity' => $paquete->rareza]) }}" class="btn btn-outline mw-md rounded btn-primary">Abrir</a>
                   </div>
                 </div>
               </div>

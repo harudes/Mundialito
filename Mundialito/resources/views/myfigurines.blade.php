@@ -7,7 +7,7 @@
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <img src="img/{{$figurita->imagen}}.png"  alt="..." height="300" width="270">
+                  <img src="img/{{$figurita->imagen}}.png"  alt="..." height="200" width="150">
                   <div class="caption">
                     <h3>{{$figurita->nombre}}</h3>
                     <p>...</p>

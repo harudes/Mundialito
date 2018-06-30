@@ -21,7 +21,8 @@ Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/myfigurines', 'MyFigurinesController@index')->name('myfigurines');
-    Route::get('/openpackage', 'OpenPackageController@index')->name('openpackage');
+    Route::get('/openpackage', 'OpenPackageController@index')->name('mypackages');
+    Route::get('/openpackage/{rarity}', 'OpenPackageController@openPackage')->name('openpackage');    
     Route::get('/myalbum/{page}', 'SeeAlbumController@index')->name('myalbum');
 });
 
