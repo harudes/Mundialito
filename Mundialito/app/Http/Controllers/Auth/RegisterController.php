@@ -6,6 +6,8 @@ use Mundialito\User;
 use Mundialito\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -65,6 +67,23 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $uid = User::count()+1;   
+        DB::table('paquetes')->insert([
+            'user_id' => $uid,
+            'rareza' => 1,
+        ]);
+        DB::table('paquetes')->insert([
+            'user_id' => $uid,
+            'rareza' => 2,
+        ]);
+        DB::table('paquetes')->insert([
+            'user_id' => $uid,
+            'rareza' => 3,
+        ]);
+        DB::table('paquetes')->insert([
+            'user_id' => $uid,
+            'rareza' => 4,
+        ]);
         return User::create([
             'name' => $data['name'],
             'nickname' => $data['nickname'],
