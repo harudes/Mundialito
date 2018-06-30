@@ -17,7 +17,7 @@ class UsersTableSeeder extends Seeder
             'nickname' => 'Paulox',
             'email' => 'paulocrr@gmail.com',
             'edad' => 22,
-            'password' => Hash::make('fabioselacome'),
+            'password' => Hash::make('luchito'),
         ]);
     }
 }

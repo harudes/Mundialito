@@ -2,25 +2,22 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    Aquí se mostrará tus figuritas.
-                    @foreach($figuritas as $figurita)
-                    	{{$figurita->imagen}}
-					@endforeach
+    <div>
+         @foreach($figuritas as $figurita)
+            <div class="row">
+              <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                  <img src="img/{{$figurita->imagen}}.png"  alt="..." height="300" width="270">
+                  <div class="caption">
+                    <h3>{{$figurita->nombre}}</h3>
+                    <p>...</p>
+                    <p>
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
+         @endforeach
     </div>
 </div>
 @endsection
