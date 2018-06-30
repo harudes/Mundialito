@@ -20,6 +20,9 @@
             <div>
                 <a href="{{route('myfigurines')}}" class="btn btn-outline mw-md rounded btn-primary">Mis figuritas</a>
             </div>
+            <div>
+                <a href="{{route('myalbum',['page' => 1])}}" class="btn btn-outline mw-md rounded btn-primary">Álbum</a>
+            </div>            
         </div>
     </div>
 </div>
