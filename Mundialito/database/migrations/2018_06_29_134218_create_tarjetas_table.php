@@ -17,8 +17,7 @@ class CreateTarjetasTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->double('saldo',15,2);            
-            $table->timestamps();
+            $table->double('saldo',15,2); 
         });
     }
 

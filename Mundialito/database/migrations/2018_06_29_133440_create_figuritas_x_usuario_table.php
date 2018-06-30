@@ -19,8 +19,7 @@ class CreateFiguritasXUsuarioTable extends Migration
             $table->unsignedInteger('figurita_id');            
             $table->foreign('figurita_id')->references('id')->on('figuritas')->onDelete('cascade');             
             $table->integer('cantidad');
-            $table->boolean('pegada');            
-            $table->timestamps();
+            $table->boolean('pegada');
         });
     }
 

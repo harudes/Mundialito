@@ -16,16 +16,15 @@ class CreateFiguritasTable extends Migration
         Schema::create('figuritas', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('pais_id');                        
-            $table->foreign('pais_id')->references('id')->on('pais')->onDelete('cascade');            
+            $table->foreign('pais_id')->references('id')->on('paises')->onDelete('cascade');            
             $table->string('nombre');
             $table->string('imagen');
             $table->integer('rareza');
             $table->string('tipo');
-            $table->double('altura',4,2);
-            $table->integer('posicion');
-            $table->integer('edad');
-            $table->integer('valoracion');
-            $table->timestamps();
+            $table->double('altura',4,2)->default(0.00);
+            $table->integer('posicion')->default(0);
+            $table->integer('edad')->default(0);
+            $table->integer('valoracion')->default(0);
         });
     }
 
