@@ -22,8 +22,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/myfigurines', 'MyFigurinesController@index')->name('myfigurines');
     Route::get('/openpackage', 'OpenPackageController@index')->name('mypackages');
+    Route::get('/openpackage/{rarity}', 'OpenPackageController@openPackage')->name('openpackage'); 
     Route::get('/buypackage', 'BuyPackageController@index')->name('packages');
-    Route::get('/openpackage/{rarity}', 'OpenPackageController@openPackage')->name('openpackage');    
+    Route::get('/buypackage/{rarity}', 'BuyPackageController@buyPackage')->name('buypackage');   
     Route::get('/myalbum/{page}', 'SeeAlbumController@index')->name('myalbum');
 });
 

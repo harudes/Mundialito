@@ -12,7 +12,7 @@ class MyFigurinesController extends Controller
         $figuritas = DB::table('users')
         			->join('figuritas_x_usuario', 'users.id', '=', 'figuritas_x_usuario.user_id')
         			->join('figuritas','figuritas_x_usuario.figurita_id','=','figuritas.id')
-        			->where('users.id','=',Auth::id())->get()
+        			->where('users.id','=',Auth::id())->orderby('pais_id')->get()
         			/*->value('figuritas.id')*/;
         $data = ['figuritas'=>$figuritas];
         return view('myfigurines',$data);

@@ -11,7 +11,7 @@
                   <div class="caption">
                     <h3>{{$paquete->nombre}}</h3>
                     <h3>Precio:{{$paquete->precio}}</h3>
-                    <a  class="btn btn-outline mw-md rounded btn-primary">Comprar</a>
+                    <a href="{{route('buypackage',['rarity' => $paquete->id]) }}" class="btn btn-outline mw-md rounded btn-primary">Comprar</a>
                   </div>
                 </div>
               </div>
