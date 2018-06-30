@@ -8,7 +8,7 @@
             <div class="row">
               <div class="col-sm-6 col-md-4">
                 <div class="thumbnail">
-                  <img src="../img/{{$figurita->imagen}}.png"  alt="..." height="200" width="150">
+                  <img src="../img/jugadores/{{$figurita->imagen}}.png"  alt="..." height="200" width="150">
                   <div class="caption">
                     <p>...</p>
                     <p>
