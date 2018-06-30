@@ -14,11 +14,8 @@
                         </div>
                     @endif
 
-                    You are logged in, {{$nickname}}!
+                    Aquí se mostrará tus figuritas.{{$figuritas}}
                 </div>
-            </div>
-            <div>
-                <a href="{{route('myfigurines')}}" class="btn btn-outline mw-md rounded btn-primary">Mis figuritas</a>
             </div>
         </div>
     </div>
